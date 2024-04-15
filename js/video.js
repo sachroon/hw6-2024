@@ -64,12 +64,10 @@ document.querySelector("#slider").addEventListener("input", function() {
 
 document.getElementById("vintage").addEventListener("click", function() {
 	console.log("Toggle Old School Style");
-	var video = document.getElementById("player1");
 	video.classList.toggle("oldSchool");
 });
 
 document.getElementById("orig").addEventListener("click", function() {
 	console.log("Revert to Original Style");
-	var video = document.getElementById("player1");
     video.classList.remove("oldSchool");
 });
