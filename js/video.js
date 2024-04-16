@@ -12,6 +12,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	document.getElementById("volume").textContent = `${video.volume * 100}%`;
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -44,14 +45,16 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
-    console.log("Mute/Unmute Video");
-    if (video.muted) {
+     if (video.muted) {
         video.muted = false;
         this.textContent = "Mute";
+		console.log("Unmute");
     } else {
         video.muted = true;
         this.textContent = "Unmute";
+		console.log("Mute");
     }
+	
 });
 
 document.querySelector("#slider").addEventListener("input", function() {
