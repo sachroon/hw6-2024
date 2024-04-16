@@ -62,12 +62,10 @@ document.querySelector("#slider").addEventListener("input", function() {
 });
 
 
-document.getElementById("vintage").addEventListener("click", function() {
-	console.log("Toggle Old School Style");
-	video.classList.toggle("oldSchool");
+document.querySelector("#vintage").addEventListener("click", function() {
+    video.classList.add("oldSchool");
 });
 
-document.getElementById("orig").addEventListener("click", function() {
-	console.log("Revert to Original Style");
+document.querySelector("#orig").addEventListener("click", function() {
     video.classList.remove("oldSchool");
 });
